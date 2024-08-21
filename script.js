@@ -1,6 +1,6 @@
 let score = loadScore();
-let energy = 150;
-const maxEnergy = 150;
+let energy = 500;
+const maxEnergy = 500;
 const scoreElement = document.getElementById('score');
 const goldenImage = document.getElementById('golden-image');
 const rankText = document.getElementById('rank-text');
@@ -28,19 +28,19 @@ function handleClick() {
 
 function updateRankText(score) {
     if (score < 1000) {
-        rankText.innerHTML = 'لیگ برنزی 🥉'; // اضافه کردن ایموجی برنز
+        rankText.innerHTML = 'noob 🥉'; // اضافه کردن ایموجی برنز
         bodyElement.style.background = 'linear-gradient(180deg, #000000, #cd7f32)';
         energyBar.style.backgroundColor = '#cd7f32'; /* رنگ نوار شارژ برای لیگ برنزی */
     } else if (score < 2000) {
-        rankText.innerHTML = 'لیگ نقره‌ای 🥈'; // اضافه کردن ایموجی نقره
+        rankText.innerHTML = ' normal 🥈'; // اضافه کردن ایموجی نقره
         bodyElement.style.background = 'linear-gradient(180deg, #000000, #c0c0c0)';
         energyBar.style.backgroundColor = '#c0c0c0'; /* رنگ نوار شارژ برای لیگ نقره‌ای */
     } else if (score < 3000) {
-        rankText.innerHTML = 'لیگ طلایی 🥇'; // اضافه کردن ایموجی طلا
+        rankText.innerHTML = ' pro 🥇'; // اضافه کردن ایموجی طلا
         bodyElement.style.background = 'linear-gradient(180deg, #000000, #f9a602)';
         energyBar.style.backgroundColor = '#f9a602'; /* رنگ نوار شارژ برای لیگ طلایی */
     } else {
-        rankText.innerHTML = 'لیگ الماس 💎'; // اضافه کردن ایموجی الماس
+        rankText.innerHTML = ' Hacker 💎'; // اضافه کردن ایموجی الماس
         bodyElement.style.background = 'linear-gradient(180deg, #000000, #b9f2ff)';
         energyBar.style.backgroundColor = '#b9f2ff'; /* رنگ نوار شارژ برای لیگ الماس */
     }
@@ -51,7 +51,7 @@ function updateEnergyBar() {
     energyBar.style.width = energyPercentage + '%';
 }
 
-// شارژ انرژی هر دو ثانیه یک واحد تا رسیدن به 150
+// شارژ انرژی هر دو ثانیه یک واحد تا رسیدن به 500-
 setInterval(() => {
     if (energy < maxEnergy) {
         energy++;
